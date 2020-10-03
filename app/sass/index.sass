@@ -1,0 +1,49 @@
+@import _variables
+@import _mixins
+@import header
+@import main
+@import banners
+
+// Default params
+*
+	margin: 0px
+	padding: 0px
+	box-sizing: border-box
+	font-family: $fonts
+
+.container
+	width: 1380px
+	margin: 0 auto
+
+.shape-bottom
+	&:after
+		content: ''
+		background: url('/image/Shape_2.png')
+		position: absolute
+		width: 140px
+		height: 72px
+		bottom: -548px
+
+// Buttons
+.button
+	font-size: 18px
+	font-weight: 700
+	line-height: 60.13px
+	border-radius: 30px
+	&:hover
+		cursor: pointer
+
+.button-primary
+	width: 280px
+	height: 60px
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4)
+	border: none
+	color: $text-color
+	background-color: #8824cd
+
+.button-secondary
+	width: 341px
+	height: 62px
+	border-radius: 31px
+	background-color: #ffffff
+	color: #d54c63

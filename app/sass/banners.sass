@@ -1,0 +1,187 @@
+@import _variables
+@import _mixins
+
+.note-title
+  text-transform: uppercase
+.large
+  text-transform: none
+  font-size: 34px
+  line-height: 1.71
+  font-weight: 300
+
+.wrap
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+
+.banner-secondary
+  height: 512px
+  background-color: $secondary-background
+  .row
+    display: flex
+  .note
+    @include note(400px)
+    margin: 0 33px 68px 0
+    &:last-child
+      margin-right: 0px
+
+.banner-primary
+  height: 539px
+  background: url('/image/Layer_29.png') 100%/cover
+  background-color: $primary-background
+  text-align: center
+
+  .note
+    @include note(512px)
+
+  .note-description
+    font-size: 1.1em
+    margin-bottom: 32px
+
+.section-experience
+  position: relative
+  display: flex
+  height: 550px
+  align-items: flex-end
+  &:hover
+    .img-overlay
+      filter: none
+    .section-content
+      height: 100%
+      background-color: rgba(82, 26, 102, .5)
+
+  .img-overlay
+    position: absolute
+    width: 100%
+    height: 100%
+    background: url('/image/Layer_12.jpg') 65%/cover
+    z-index: -1
+    transition: 0.35s
+    filter: grayscale(1)
+
+  .section-content
+    width: 100%
+    height: 457px
+    transition: all 0.45s cubic-bezier(0.4, 0, 1, 1)
+    background-color: rgba(82, 26, 102, .8)
+
+  .note
+    @include note(512px)
+    text-align: center
+  .note-description
+    color: #ddaced
+    font-size: 1.2rem
+    margin-bottom: 32px
+    letter-spacing: -0.2px
+  .sub-description
+    margin-top: 18px
+    font-size: 0.8rem
+
+// for sections with img and note
+.banner-option
+	overflow: hidden
+	.section-content
+		display: flex
+		align-items: center
+		position: relative
+
+  .section-img
+    position: absolute
+    height: 100%
+
+  .note
+    @include note(60%, #3a4d60)
+
+    .note-title
+      font-size: 16px
+      margin: 0px
+      font-weight: 800
+    .note-description
+      font-size: 19px
+      line-height: 31px
+    .sub-description
+      margin-top: 40px
+      font-size: 16px
+      line-height: 26px
+
+.banner-option-flow
+  @include banner-option('normal', 496px)
+  
+.banner-option-reverse
+  @include banner-option('reverse', 523px)
+
+.banner-comment
+  height: 670px
+  width: auto
+  display: flex
+  align-items: flex-end
+  transition: .9s
+  position: relative
+  &:hover
+    box-shadow: inset 0 -150px 250px 100px #a0a0a082
+    .img-overlay
+      background-position-y: top
+  .img-overlay
+    position: absolute
+    width: 100%
+    height: 100%
+    transition: inherit
+    z-index: -1
+    background: url('../image/Layer_27.jpg') 100%/cover
+  .commentary
+    color: $text-color
+    max-width: 515px
+    margin-bottom: 90px
+  .position
+    width: 135px
+    height: 35px
+    line-height: 35px
+    border-radius: 17.5px
+    border: solid 2px #ffffff
+    box-sizing: content-box
+    text-align: center
+    transition: .3s
+    cursor: pointer
+    &:hover
+      background-color: #fff
+      color: black
+      
+  .comment-text
+    font-size: 2.4rem
+    line-height: 1.25
+    font-weight: 400
+    margin: 25px 0
+  .person
+    display: flex
+  .person-avatar
+    width: 45px
+    height: 45px
+    margin-right: 15px
+    display: inline-block
+    img
+      border-radius: 50%
+      width: inherit
+      height: inherit
+      cursor: pointer
+  .person-info
+    line-height: 45px
+
+
+
+.banner-footer
+  padding-top: 78px
+  .note
+    @include note(390px)
+
+  &.primary
+    height: 500px
+    background-color: $primary-background
+    .sub-description
+      margin-top: 25px
+		
+  &.secondary
+    height: 367px
+    background-color: $secondary-background
+    .note
+      width: 100%

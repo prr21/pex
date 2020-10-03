@@ -1,0 +1,26 @@
+@import _variables
+
+@mixin note($width: 100%, $color: $text-color)
+  width: $width
+  font-size: 15px
+  line-height: 26px
+  color: $color
+
+  &-title
+    margin-bottom: 13px
+    padding: 2px
+
+@mixin banner-option($direction: normal, $height: 100px)
+  .section-content
+    height: $height
+
+  @if $direction != 'normal' 
+    .section-content
+      justify-content: flex-start
+    .section-img
+      right: -30%
+  @else 
+    .section-content
+      justify-content: flex-end
+    .section-img
+      left: -30%
