@@ -1,2 +1,88 @@
 @import _variables
 @import _mixins
+
+@media (max-width: 1200px)
+  .container,
+  .header,
+  .wrap
+    max-width: 1100px
+  .container,
+  .wrap
+    padding: 0 20px
+  
+  .header-logo,
+  .header-menu
+    margin: 0 20px
+  
+  .container
+    .section-content
+      display: flex
+      flex-direction: column
+  
+  .banner-option
+    .section-img
+      position: static
+      img
+        width: 100%
+
+@media (max-width: 1024px)
+  .container,
+  .header,
+  .wrap
+    max-width: 1024px
+  .header-content
+    line-height: 70px
+    min-height: 70px
+  .header-navigation
+    display: none
+    
+  .header-content.open
+    background-color: #75466dbf
+    height: 100%
+    padding-bottom: 15px
+    overflow: auto
+    body
+      overflow: hidden
+    .header-logo
+      display: none
+    .header-menu
+      float: none
+    .header-navigation
+      display: block
+      .nav-list
+        flex-direction: column
+        text-align: center
+        li
+          line-height: inherit
+      .search
+        width: 100%
+        margin: 5px auto
+
+  .header-navigation
+    display: none
+  .burger
+    display: block
+
+  .banner-secondary .row
+    flex-direction: column
+
+@media (max-width: 768px)
+  .container,
+  .header,
+  .wrap
+    max-width: 768px
+  .section-content
+    padding: 10px
+  .main-content
+    float: none
+    text-align: center  
+
+@media (max-width: 576px)
+  .container,
+  .wrap
+    max-width: 576px
+    padding: 0 5px
+
+  .button,
+  .note
+    width: 100% !important
